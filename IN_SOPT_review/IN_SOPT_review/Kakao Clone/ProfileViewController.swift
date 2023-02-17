@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "000"
+        label.text = "정채은"
 //        "\(result)"
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.textAlignment = .center

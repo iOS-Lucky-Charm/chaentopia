@@ -12,6 +12,9 @@ import SwiftyColor
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var dataLabel: UILabel!
+    var email: String?
+    
     private let welcomeLabel : UILabel = {
         let label = UILabel()
         label.text = "님\n환영합니다"
@@ -46,7 +49,10 @@ class WelcomeViewController: UIViewController {
         let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
         self.dismiss(animated: true, completion: nil)
         sceneDelegate.window?.rootViewController = listVC
-        
+        if let email = email {
+              dataLabel.text = email
+              dataLabel.sizeToFit()
+            }
         
     }
 }
