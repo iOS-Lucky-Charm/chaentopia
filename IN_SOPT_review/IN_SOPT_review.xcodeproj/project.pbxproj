@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C3372500299B3D61001BEEB1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33724FF299B3D61001BEEB1 /* ListViewController.swift */; };
+		C3372504299F5EA9001BEEB1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */; };
 		C3D50C812994EBDD004C48D6 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */; };
 		C3D50C832994EE80004C48D6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */; };
 		C3FBCB6B2990D730002AF5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBCB6A2990D730002AF5E2 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		C33724FF299B3D61001BEEB1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C3FBCB672990D730002AF5E2 /* IN_SOPT_review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IN_SOPT_review.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */,
 				C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */,
 				C33724FF299B3D61001BEEB1 /* ListViewController.swift */,
+				C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */,
 			);
 			path = "Kakao Clone";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				C3D50C832994EE80004C48D6 /* WelcomeViewController.swift in Sources */,
 				C3372500299B3D61001BEEB1 /* ListViewController.swift in Sources */,
 				C3FBCB6D2990D730002AF5E2 /* SceneDelegate.swift in Sources */,
+				C3372504299F5EA9001BEEB1 /* ProfileViewController.swift in Sources */,
 				C3FBCB7F2990D7B1002AF5E2 /* StartViewController.swift in Sources */,
 				C3D50C812994EBDD004C48D6 /* NewAccountViewController.swift in Sources */,
 			);

@@ -40,8 +40,31 @@ class ProfileViewController: UIViewController {
 
     private let chatButton : UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName:"profileTalkImg"), for: .normal)
-        button.titleLabel?.font = UIFont(name: "나와의 채팅", size: 10) ?? .systemFont(ofSize: 10, weight: .regular)
+        button.setTitle("나와의 채팅", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize:10)
+        button.setTitleColor(.white, for: .normal)
+        button.setImage(UIImage(named: "profileTalkImg")! as UIImage, for: .normal)
+        button.alignTextBelow(spacing: 8)
+        return button
+    }()
+    
+    private let editButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("프로필 편집", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize:10)
+        button.setTitleColor(.white, for: .normal)
+        button.setImage(UIImage(named: "profile_editImg")! as UIImage, for: .normal)
+        button.alignTextBelow(spacing: 8)
+        return button
+    }()
+    
+    private let kakaostoryButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("카카오스토리", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize:10)
+        button.setTitleColor(.white, for: .normal)
+        button.setImage(UIImage(named: "profileStoryImg")! as UIImage, for: .normal)
+        button.alignTextBelow(spacing: 8)
         return button
     }()
     
@@ -60,7 +83,9 @@ extension ProfileViewController {
         profileImageView,
         nameLabel,
         lineView,
-        chatButton
+        chatButton,
+        editButton,
+        kakaostoryButton
         ]
         components.forEach{
             view.addSubview($0 as! UIView)
@@ -87,10 +112,18 @@ extension ProfileViewController {
             make.height.equalTo(1)
         }
         chatButton.snp.makeConstraints { make in
-            make.top.equalTo(self.lineView.snp.bottom).offset(36)
-            make.leading.equalToSuperview().offset(83)
-            make.width.height.equalTo(56)
+            make.bottom.equalToSuperview().offset(-58)
+            make.trailing.equalTo(self.editButton.snp.leading).offset(-40)
         }
+        editButton.snp.makeConstraints { make in
+            make.top.equalTo(self.chatButton.snp.top)
+            make.centerX.equalToSuperview()
+        }
+        kakaostoryButton.snp.makeConstraints { make in
+            make.top.equalTo(self.chatButton.snp.top)
+            make.leading.equalTo(self.editButton.snp.trailing).offset(40)
+        }
+        
         
     }
     @objc
@@ -99,4 +132,31 @@ extension ProfileViewController {
     }
 
     
+}
+
+
+
+extension UIButton {
+  
+    
+    func alignTextBelow(spacing: CGFloat = 4.0) {
+            guard let image = self.imageView?.image else {
+                return
+            }
+
+            guard let titleLabel = self.titleLabel else {
+                return
+            }
+
+            guard let titleText = titleLabel.text else {
+                return
+            }
+
+            let titleSize = titleText.size(withAttributes: [
+                NSAttributedString.Key.font: titleLabel.font as Any
+            ])
+
+            titleEdgeInsets = UIEdgeInsets(top: spacing, left: -image.size.width, bottom: -image.size.height, right: 0)
+            imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + spacing), left: 0, bottom: 0, right: -titleSize.width)
+        }
 }
