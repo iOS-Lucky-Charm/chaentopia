@@ -71,7 +71,16 @@ extension ListViewController {
     }
     @objc
     private func touchupProfileButton() {
-        
+        presentToProfileVC()
+    }
+    
+    private func presentToProfileVC() {
+        let profileVC = ProfileViewController()
+        profileVC.modalPresentationStyle = .formSheet
+        self.present(profileVC, animated: true, completion: nil)
+//        if let email = emailTextField.text{
+//            profileVC.dataBind(result: email)
+//        }
     }
 }
 

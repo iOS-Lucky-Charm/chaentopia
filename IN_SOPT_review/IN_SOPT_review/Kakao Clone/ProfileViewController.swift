@@ -8,6 +8,13 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    private let backgroundView: UIView = {
+        let view = UIView()
+        view.layer.backgroundColor = (UIColor.black.cgColor).copy(alpha:0.2)
+        return view
+    }()
+
     private lazy var closeButton : UIButton = {
         let button = UIButton()
         button.addTarget(self, action:
@@ -25,7 +32,8 @@ class ProfileViewController: UIViewController {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "정채은"
+        label.text = "000"
+//        "\(result)"
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.textAlignment = .center
         label.textColor = .white
@@ -72,13 +80,15 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
-        view.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.6)
+        view.backgroundColor = .systemGray2
+        
     }
 }
 
 extension ProfileViewController {
     private func layout() {
         let components : [Any] = [
+        backgroundView,
         closeButton,
         profileImageView,
         nameLabel,
@@ -89,6 +99,9 @@ extension ProfileViewController {
         ]
         components.forEach{
             view.addSubview($0 as! UIView)
+        }
+        backgroundView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
         closeButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(38)

@@ -109,6 +109,7 @@ class NewAccountViewController: UIViewController {
         presentToWelcomeVC()
         self.navigationController?.popViewController(animated: true)
         
+        
     }
 
 }

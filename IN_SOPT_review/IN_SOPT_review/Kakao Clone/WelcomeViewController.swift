@@ -42,6 +42,12 @@ class WelcomeViewController: UIViewController {
     @objc
     private func touchupCompleteButton() {
         self.dismiss(animated: true, completion: nil)
+        let listVC = ListViewController()
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+        self.dismiss(animated: true, completion: nil)
+        sceneDelegate.window?.rootViewController = listVC
+        
+        
     }
 }
 extension WelcomeViewController {
