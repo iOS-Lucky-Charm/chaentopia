@@ -11,6 +11,11 @@
 		C3372504299F5EA9001BEEB1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */; };
 		C3D50C812994EBDD004C48D6 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */; };
 		C3D50C832994EE80004C48D6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */; };
+		C3F5DE0729A7B18F00443834 /* KakaoTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0629A7B18F00443834 /* KakaoTabbarController.swift */; };
+		C3F5DE0929A7B1B400443834 /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0829A7B1B400443834 /* PhotoGridViewController.swift */; };
+		C3F5DE0B29A7B1C400443834 /* SharpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0A29A7B1C400443834 /* SharpViewController.swift */; };
+		C3F5DE0D29A7B1DD00443834 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0C29A7B1DD00443834 /* ShopViewController.swift */; };
+		C3F5DE0F29A7B1E200443834 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0E29A7B1E200443834 /* MoreViewController.swift */; };
 		C3FBCB6B2990D730002AF5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBCB6A2990D730002AF5E2 /* AppDelegate.swift */; };
 		C3FBCB6D2990D730002AF5E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBCB6C2990D730002AF5E2 /* SceneDelegate.swift */; };
 		C3FBCB722990D730002AF5E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBCB702990D730002AF5E2 /* Main.storyboard */; };
@@ -26,6 +31,11 @@
 		C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C3F5DE0629A7B18F00443834 /* KakaoTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTabbarController.swift; sourceTree = "<group>"; };
+		C3F5DE0829A7B1B400443834 /* PhotoGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
+		C3F5DE0A29A7B1C400443834 /* SharpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpViewController.swift; sourceTree = "<group>"; };
+		C3F5DE0C29A7B1DD00443834 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		C3F5DE0E29A7B1E200443834 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		C3FBCB672990D730002AF5E2 /* IN_SOPT_review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IN_SOPT_review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FBCB6A2990D730002AF5E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3FBCB6C2990D730002AF5E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3F5DE1029A7B20A00443834 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C3F5DE0629A7B18F00443834 /* KakaoTabbarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C3F5DE1129A7B21600443834 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C3FBCB7E2990D7B1002AF5E2 /* StartViewController.swift */,
+				C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */,
+				C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */,
+				C33724FF299B3D61001BEEB1 /* ListViewController.swift */,
+				C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */,
+				C3F5DE0829A7B1B400443834 /* PhotoGridViewController.swift */,
+				C3F5DE0A29A7B1C400443834 /* SharpViewController.swift */,
+				C3F5DE0C29A7B1DD00443834 /* ShopViewController.swift */,
+				C3F5DE0E29A7B1E200443834 /* MoreViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		C3F5DE1229A7B22300443834 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C3FBCB5E2990D730002AF5E2 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +111,7 @@
 			children = (
 				C3FBCB6A2990D730002AF5E2 /* AppDelegate.swift */,
 				C3FBCB6C2990D730002AF5E2 /* SceneDelegate.swift */,
+				C3F5DE1029A7B20A00443834 /* Tabbar */,
 				C3FBCB802990D7B7002AF5E2 /* Kakao Clone */,
 				C3FBCB702990D730002AF5E2 /* Main.storyboard */,
 				C3FBCB732990D732002AF5E2 /* Assets.xcassets */,
@@ -82,11 +124,8 @@
 		C3FBCB802990D7B7002AF5E2 /* Kakao Clone */ = {
 			isa = PBXGroup;
 			children = (
-				C3FBCB7E2990D7B1002AF5E2 /* StartViewController.swift */,
-				C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */,
-				C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */,
-				C33724FF299B3D61001BEEB1 /* ListViewController.swift */,
-				C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */,
+				C3F5DE1129A7B21600443834 /* VC */,
+				C3F5DE1229A7B22300443834 /* Model */,
 			);
 			path = "Kakao Clone";
 			sourceTree = "<group>";
@@ -171,11 +210,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FBCB6B2990D730002AF5E2 /* AppDelegate.swift in Sources */,
+				C3F5DE0B29A7B1C400443834 /* SharpViewController.swift in Sources */,
+				C3F5DE0D29A7B1DD00443834 /* ShopViewController.swift in Sources */,
 				C3D50C832994EE80004C48D6 /* WelcomeViewController.swift in Sources */,
 				C3372500299B3D61001BEEB1 /* ListViewController.swift in Sources */,
 				C3FBCB6D2990D730002AF5E2 /* SceneDelegate.swift in Sources */,
 				C3372504299F5EA9001BEEB1 /* ProfileViewController.swift in Sources */,
+				C3F5DE0729A7B18F00443834 /* KakaoTabbarController.swift in Sources */,
 				C3FBCB7F2990D7B1002AF5E2 /* StartViewController.swift in Sources */,
+				C3F5DE0F29A7B1E200443834 /* MoreViewController.swift in Sources */,
+				C3F5DE0929A7B1B400443834 /* PhotoGridViewController.swift in Sources */,
 				C3D50C812994EBDD004C48D6 /* NewAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

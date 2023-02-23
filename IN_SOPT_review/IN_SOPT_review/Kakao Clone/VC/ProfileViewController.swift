@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "정채은"
+        
 //        "\(result)"
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.textAlignment = .center
@@ -137,7 +138,7 @@ extension ProfileViewController {
             make.leading.equalTo(self.editButton.snp.trailing).offset(40)
         }
         
-        
+
     }
     @objc
     private func touchupCloseButton() {

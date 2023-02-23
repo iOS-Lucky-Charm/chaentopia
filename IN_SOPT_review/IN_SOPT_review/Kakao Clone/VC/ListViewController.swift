@@ -17,6 +17,12 @@ class ListViewController: UIViewController {
         return label
     }()
     
+    private let nameLabel : UILabel = {
+        let label = UILabel()
+        label.text = "000"
+        return label
+    }()
+    
     private let settingImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named:"settings")
@@ -41,6 +47,10 @@ class ListViewController: UIViewController {
         view.backgroundColor = .white
         layout()
 
+    }
+    func dataBind(result:String) {
+        nameLabel.text = "\(result)"
+        
     }
 }
 

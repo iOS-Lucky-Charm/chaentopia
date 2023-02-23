@@ -41,6 +41,7 @@ class WelcomeViewController: UIViewController {
     }
     func dataBind(result:String) {
         welcomeLabel.text = "\(result)님\n환영합니다"
+        
     }
     @objc
     private func touchupCompleteButton() {
