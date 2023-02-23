@@ -19,8 +19,23 @@ class ListViewController: UIViewController {
     
     private let nameLabel : UILabel = {
         let label = UILabel()
-        label.text = "000"
+        label.text = "정채은"
+        label.font = .systemFont(ofSize: 16, weight: .semibold)
         return label
+    }()
+    
+    private let nowLabel : UILabel = {
+        let label = UILabel()
+        label.text = "아요를 뿌시고 싶다.."
+        label.font = .systemFont(ofSize: 11, weight: .regular)
+        label.textColor = .systemGray2
+        return label
+    }()
+    
+    private let lineView : UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray5
+        return view
     }()
     
     private let settingImageView : UIImageView = {
@@ -34,11 +49,7 @@ class ListViewController: UIViewController {
         let button = UIButton()
         button.addTarget(self, action:
                             #selector(touchupProfileButton), for: .touchUpInside)
-        
         button.setBackgroundImage(UIImage(named: "profile_userImg"), for: .normal)
-//        button.setImage(UIImage(systemName: "profile_userImg"), for: .normal)
-        // button에 setImage가 아니라 setBackgroundImage를 써야 하는 이유?
-        
         return button
     }()
 
@@ -58,6 +69,9 @@ extension ListViewController {
     private func layout() {
         let components : [Any] = [
         titleLabel,
+        nameLabel,
+        nowLabel,
+        lineView,
         settingImageView,
         profileButton
         ]
@@ -68,6 +82,7 @@ extension ListViewController {
             make.top.equalToSuperview().offset(56)
             make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(14)
         }
+        
         settingImageView.snp.makeConstraints { make in
             make.top.equalTo(self.titleLabel.snp.top).offset(1)
             make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(57)
@@ -78,9 +93,23 @@ extension ListViewController {
             make.height.equalTo(59)
             make.width.equalTo(58)
         }
+        nameLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.profileButton.snp.top).offset(12)
+            make.leading.equalTo(self.profileButton.snp.trailing).inset(-11)
+        }
+        nowLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.nameLabel.snp.bottom).offset(6)
+            make.leading.equalTo(self.nameLabel.snp.leading)
+        }
+        lineView.snp.makeConstraints { make in
+            make.top.equalTo(self.profileButton.snp.bottom).offset(7)
+            make.leading.trailing.equalTo(16)
+            make.height.equalTo(1)
+        }
     }
     @objc
     private func touchupProfileButton() {
+        
         presentToProfileVC()
     }
     

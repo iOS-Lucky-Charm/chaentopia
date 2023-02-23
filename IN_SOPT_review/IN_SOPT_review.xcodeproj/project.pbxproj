@@ -11,6 +11,7 @@
 		C3372504299F5EA9001BEEB1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */; };
 		C3D50C812994EBDD004C48D6 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */; };
 		C3D50C832994EE80004C48D6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */; };
+		C3D7DD2F29A7B9220093248C /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7DD2E29A7B9220093248C /* FriendModel.swift */; };
 		C3F5DE0729A7B18F00443834 /* KakaoTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0629A7B18F00443834 /* KakaoTabbarController.swift */; };
 		C3F5DE0929A7B1B400443834 /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0829A7B1B400443834 /* PhotoGridViewController.swift */; };
 		C3F5DE0B29A7B1C400443834 /* SharpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0A29A7B1C400443834 /* SharpViewController.swift */; };
@@ -31,6 +32,7 @@
 		C3372503299F5EA9001BEEB1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C3D7DD2E29A7B9220093248C /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		C3F5DE0629A7B18F00443834 /* KakaoTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTabbarController.swift; sourceTree = "<group>"; };
 		C3F5DE0829A7B1B400443834 /* PhotoGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
 		C3F5DE0A29A7B1C400443834 /* SharpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		C3F5DE1229A7B22300443834 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3D7DD2E29A7B9220093248C /* FriendModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				C3372500299B3D61001BEEB1 /* ListViewController.swift in Sources */,
 				C3FBCB6D2990D730002AF5E2 /* SceneDelegate.swift in Sources */,
 				C3372504299F5EA9001BEEB1 /* ProfileViewController.swift in Sources */,
+				C3D7DD2F29A7B9220093248C /* FriendModel.swift in Sources */,
 				C3F5DE0729A7B18F00443834 /* KakaoTabbarController.swift in Sources */,
 				C3FBCB7F2990D7B1002AF5E2 /* StartViewController.swift in Sources */,
 				C3F5DE0F29A7B1E200443834 /* MoreViewController.swift in Sources */,
