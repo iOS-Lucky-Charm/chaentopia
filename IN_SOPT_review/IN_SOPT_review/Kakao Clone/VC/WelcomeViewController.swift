@@ -46,10 +46,10 @@ class WelcomeViewController: UIViewController {
     @objc
     private func touchupCompleteButton() {
         self.dismiss(animated: true, completion: nil)
-        let listVC = ListViewController()
+        let tabbarVC = KakaoTabbarController()
         let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
         self.dismiss(animated: true, completion: nil)
-        sceneDelegate.window?.rootViewController = listVC
+        sceneDelegate.window?.rootViewController = tabbarVC
         if let email = email {
               dataLabel.text = email
               dataLabel.sizeToFit()

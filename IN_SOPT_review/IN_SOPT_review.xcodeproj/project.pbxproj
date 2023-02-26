@@ -12,6 +12,8 @@
 		C3D50C812994EBDD004C48D6 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */; };
 		C3D50C832994EE80004C48D6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */; };
 		C3D7DD2F29A7B9220093248C /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7DD2E29A7B9220093248C /* FriendModel.swift */; };
+		C3D7DD3129A7BDBF0093248C /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7DD3029A7BDBF0093248C /* FriendTableViewCell.swift */; };
+		C3D7DD3C29AB4CFD0093248C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C3D7DD3B29AB4CFD0093248C /* Then */; };
 		C3F5DE0729A7B18F00443834 /* KakaoTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0629A7B18F00443834 /* KakaoTabbarController.swift */; };
 		C3F5DE0929A7B1B400443834 /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0829A7B1B400443834 /* PhotoGridViewController.swift */; };
 		C3F5DE0B29A7B1C400443834 /* SharpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F5DE0A29A7B1C400443834 /* SharpViewController.swift */; };
@@ -33,6 +35,7 @@
 		C3D50C802994EBDD004C48D6 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 		C3D50C822994EE80004C48D6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C3D7DD2E29A7B9220093248C /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		C3D7DD3029A7BDBF0093248C /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		C3F5DE0629A7B18F00443834 /* KakaoTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTabbarController.swift; sourceTree = "<group>"; };
 		C3F5DE0829A7B1B400443834 /* PhotoGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
 		C3F5DE0A29A7B1C400443834 /* SharpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FBCB862994DE5F002AF5E2 /* SwiftyColor in Frameworks */,
+				C3D7DD3C29AB4CFD0093248C /* Then in Frameworks */,
 				C3FBCB832990DB12002AF5E2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3D7DD3229A7BDC40093248C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7DD3029A7BDBF0093248C /* FriendTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C3F5DE1029A7B20A00443834 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 			children = (
 				C3F5DE1129A7B21600443834 /* VC */,
 				C3F5DE1229A7B22300443834 /* Model */,
+				C3D7DD3229A7BDC40093248C /* Cell */,
 			);
 			path = "Kakao Clone";
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 			packageProductDependencies = (
 				C3FBCB822990DB12002AF5E2 /* SnapKit */,
 				C3FBCB852994DE5F002AF5E2 /* SwiftyColor */,
+				C3D7DD3B29AB4CFD0093248C /* Then */,
 			);
 			productName = IN_SOPT_review;
 			productReference = C3FBCB672990D730002AF5E2 /* IN_SOPT_review.app */;
@@ -184,6 +198,7 @@
 			packageReferences = (
 				C3FBCB812990DB12002AF5E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C3FBCB842994DE5F002AF5E2 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
+				C3D7DD3A29AB4CFD0093248C /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = C3FBCB682990D730002AF5E2 /* Products */;
 			projectDirPath = "";
@@ -225,6 +240,7 @@
 				C3F5DE0F29A7B1E200443834 /* MoreViewController.swift in Sources */,
 				C3F5DE0929A7B1B400443834 /* PhotoGridViewController.swift in Sources */,
 				C3D50C812994EBDD004C48D6 /* NewAccountViewController.swift in Sources */,
+				C3D7DD3129A7BDBF0093248C /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +460,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C3D7DD3A29AB4CFD0093248C /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		C3FBCB812990DB12002AF5E2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -463,6 +487,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C3D7DD3B29AB4CFD0093248C /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3D7DD3A29AB4CFD0093248C /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
 		C3FBCB822990DB12002AF5E2 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C3FBCB812990DB12002AF5E2 /* XCRemoteSwiftPackageReference "SnapKit" */;

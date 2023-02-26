@@ -6,8 +6,32 @@
 //
 
 import UIKit
+import SnapKit
+import SwiftyColor
 
-class ListViewController: UIViewController {
+final class ListViewController: UIViewController {
+    
+    private lazy var friendTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
+    
+    var friendList: [FriendModel] = [
+    FriendModel(profileImage: "profileImage1", name: "김채은", status: "안녕하세요"),
+    FriendModel(profileImage: "profileImage2", name: "이채은", status: "저는"),
+    FriendModel(profileImage: "profileImage3", name: "박채은", status: "채은이"),
+    FriendModel(profileImage: "profileImage4", name: "최채은", status: "입니다."),
+    FriendModel(profileImage: "profileImage5", name: "송채은", status: "다양한"),
+    FriendModel(profileImage: "profileImage6", name: "황채은", status: "채은이들이"),
+    FriendModel(profileImage: "profileImage7", name: "백채은", status: "모였어요"),
+    FriendModel(profileImage: "profileImage8", name: "남궁채은", status: "다들"),
+    FriendModel(profileImage: "profileImage9", name: "양채은", status: "잘부탁해요")
+    
+    ]
     
     private let titleLabel : UILabel  = {
         let label = UILabel()
@@ -56,8 +80,8 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        register()
         layout()
-
     }
     func dataBind(result:String) {
         nameLabel.text = "\(result)"
@@ -73,7 +97,8 @@ extension ListViewController {
         nowLabel,
         lineView,
         settingImageView,
-        profileButton
+        profileButton,
+        friendTableView
         ]
         components.forEach{
             view.addSubview($0 as! UIView)
@@ -84,11 +109,12 @@ extension ListViewController {
         }
         
         settingImageView.snp.makeConstraints { make in
-            make.top.equalTo(self.titleLabel.snp.top).offset(1)
+//            make.top.equalTo(self.titleLabel.snp.top).offset(1)
+            make.centerY.equalTo(self.titleLabel.snp.centerY)
             make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(57)
         }
         profileButton.snp.makeConstraints { make in
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(26)
+            make.top.equalTo(self.titleLabel.snp.bottom).offset(23)
             make.leading.equalTo(self.titleLabel.snp.leading)
             make.height.equalTo(59)
             make.width.equalTo(58)
@@ -106,10 +132,15 @@ extension ListViewController {
             make.leading.trailing.equalTo(16)
             make.height.equalTo(1)
         }
+        friendTableView.snp.makeConstraints { make in
+            make.top.equalTo(self.lineView.snp.bottom)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalToSuperview()
+            make.height.equalTo(50 * friendList.count)
+        }
     }
     @objc
     private func touchupProfileButton() {
-        
         presentToProfileVC()
     }
     
@@ -121,6 +152,30 @@ extension ListViewController {
 //            profileVC.dataBind(result: email)
 //        }
     }
+    
+    private func register() {
+        friendTableView.register(FriendTableViewCell.self, forCellReuseIdentifier: FriendTableViewCell.identifier)
+    }
 }
 
+extension ListViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+}
+
+extension ListViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friendList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let friendCell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.identifier, for: indexPath)
+                as? FriendTableViewCell else { return UITableViewCell() }
+        friendCell.dataBind(model: friendList[indexPath.row])
+        return friendCell
+    }
+    
+    
+}
 
